@@ -1,0 +1,327 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{geometry}
+\usepackage{amsfonts, amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{indentfirst}
+\usepackage{float}
+
+\geometry{a4paper, margin={3cm,2cm,2cm,3cm}}
+\setlength{\parindent}{1.25cm}
+
+% --- Configuração de Títulos (com titlesec) ---
+% Força os títulos a terem 12pt (\normalsize) e negrito
+
+\titleformat{\section}
+  {\normalsize\bfseries\MakeUppercase} % formato: 12pt e negrito
+  {\thesection.}         % rótulo (número): "1."
+  {1em}                  % separação: 1 "M" de espaço
+  {}                     % código antes do título (pode deixar vazio)
+
+\titleformat{\subsection}
+  {\normalsize\MakeUppercase} % formato: 12pt e negrito
+  {\thesubsection.}      % rótulo (número): "1.1."
+  {1em}                  % separação
+  {}                     % código antes
+
+\titleformat{\subsubsection}
+  {\normalsize\bfseries} % formato: 12pt e negrito
+  {\thesubsubsection.}   % rótulo (número): "1.1.1."
+  {1em}                  % separação
+  {}                     % código antes
+
+\newcommand{\universidade}{Universidade Federal de Santa Catarina}
+\newcommand{\centro}{Centro Tecnológico de Joinville - CTJ}
+\newcommand{\disciplina}{Mecanismos}
+\newcommand{\curso}{Engenharia Mecatrônica}
+\newcommand{\professor}{Prof. Lucas Weihmann}
+\newcommand{\titulo}{Projeto de Came máquina de costura}
+\newcommand{\autori}{Gabriel Andrea Carvalho}
+\newcommand{\autorii}{Gabriella Arévalo Marques}
+\newcommand{\autoriii}{Hebert Alan Kubis}
+\newcommand{\autoriv}{Jeiel Santos Araújo Oliveira}
+\newcommand{\autorv}{João Vitor Franque Goetz}
+\newcommand{\autorvi}{Johanna Camila Rey}
+
+\begin{document}
+    
+    \begin{titlepage}
+        \begin{center}
+            {\bfseries \MakeUppercase{\universidade}}\\
+            {\bfseries \MakeUppercase{\centro}}\\[3cm]
+
+            {\MakeUppercase{\autori, \autorii, \autoriii, \autoriv, \autorv, \autorvi}}
+
+            \vfill
+            {\bfseries \MakeUppercase{\titulo}}\\
+            \vfill
+
+            {Joinville}\\
+            {\number\year}
+
+        \end{center}
+    \end{titlepage}
+
+    \section{Introdução}
+
+    \section{Requisitos de projeto}
+
+        Os requisitos de projeto são os especificados:
+
+        \begin{itemize}
+            \item Raio de base: 19mm
+            \item Raio do seguidor (rolete) = 6mm
+            \item Altura máxima de deslocamnteo da agulha: 12mm
+            \item Subida: 12mm em 50º
+            \item Espera superior: em 10mm por 20º
+            \item Descida: 12mm em 50º
+            \item Repete-se essa sequência até completar 360º
+            \item Velocidade de rotação: $\omega$ = 150 rpm
+        \end{itemize}
+
+    \section{Equacionamento}
+
+        Para uma curva polinomial a expressão geral é dada por:
+
+        \begin{equation}
+            s = c_0 + c_1 \cdot \theta + c_2 \cdot \theta^2 + c_3 \cdot \theta^3 + ... + c_n \cdot \theta^n
+        \end{equation}
+
+        Onde:
+
+        \begin{itemize}
+            \item s = deslocamento do seguidor
+            \item $\theta$ = angulo de rotação do Came
+            \item $c_i$ = constantes (i = 1, 2, 3, ...)
+            \item n - a ordem do polinomio
+        \end{itemize}
+
+        Como pedido no trabalho, o polinomio a ser utilizado deve ser um 3-4-5, ou seja:
+
+        \begin{equation}
+            s(\theta) = c_0 + c_1 \cdot \theta + c_2 \cdot \theta^2 + c_3 \cdot \theta^3 + c_4 \cdot \theta^4 + c_5 \cdot \theta^5
+        \end{equation}
+
+        \begin{equation}
+            \frac{ds(\theta)}{d\theta} = c_1 + 2 \cdot c_2 \cdot \theta + 3 \cdot c_3 \cdot \theta^2 + 4 \cdot c_4 \cdot \theta^3 + 5 \cdot c_5 \cdot \theta^4
+        \end{equation}
+
+        \begin{equation}
+            \frac{d^2s(\theta)}{d\theta^2} = 2 \cdot c_2 + 6 \cdot c_3 \cdot \theta + 12 \cdot c_4 \cdot \theta^2 + 20 \cdot c_5 \cdot \theta^3
+        \end{equation}
+
+        Ou na forma normalizada:
+
+        \begin{equation}
+            s(\theta) = h \cdot [10 \cdot (\frac{\theta - \theta_i}{\beta})^3 - 15 \cdot (\frac{\theta - \theta_i}{\beta})^4 + 6 \cdot (\frac{\theta - \theta_i}{\beta})^5]
+        \end{equation}
+
+        \begin{equation}
+            \frac{ds(\theta)}{d\theta} = h \cdot 30 \cdot [(\frac{\theta - \theta_i}{\beta})^2 - 2 \cdot (\frac{\theta - \theta_i}{\beta})^3 + (\frac{\theta - \theta_i}{\beta})^4]
+        \end{equation}
+
+        \begin{equation}
+            \frac{d^2s(\theta)}{d\theta^2} = h \cdot 60 \cdot [(\frac{\theta - \theta_i}{\beta}) - 3 \cdot (\frac{\theta - \theta_i}{\beta})^2 + 2 \cdot (\frac{\theta - \theta_i}{\beta})^3]
+        \end{equation}
+    
+        \subsection{Posição}
+
+            Para calcular encontrar as equações da posição, velocidade e aceleração, deve-se usar o parametro $\beta$ que é diferente para cada um 
+            dos três trechos. O $\beta$ é definido como:
+
+            \begin{equation}
+                \beta = \theta_f - \theta_i
+            \end{equation}
+
+            Assim, tem-se:
+
+            \begin{itemize}
+                \item Trecho 1 (subida): $\beta$ = 50º - 0º = 50º = 0.873rad
+                \item Trecho 2 (espera): $\beta$ = 70º - 50º = 20º = 0.349rad
+                \item Trecho 3 (descida): $\beta$ = 120º - 70º = 50º = 0.873rad
+            \end{itemize}
+
+            Deste modo, a posição para o trecho 1 é dada por:
+
+            \begin{equation}
+                s(\theta) = 12 \cdot [10 \cdot (\frac{\theta}{0.873})^3 - 15 \cdot (\frac{\theta}{0.873})^4 + 6 \cdot (\frac{\theta}{0.873})^5]
+            \end{equation}
+
+            Para o trecho 2:
+
+            \begin{equation}
+                s(\theta) = 12
+            \end{equation}
+
+            E para o trecho 3, que possui uma pequena diferença por ser de descida, sendo que aqui a expressão anterior entra subtraindo de 1:
+
+            \begin{equation}
+                s(\theta) = 12 \cdot [1 - (10 \cdot (\frac{\theta - 1.222}{0.873})^3 - 15 \cdot (\frac{\theta - 1.222}{0.873})^4 + 6 \cdot (\frac{\theta - 1.222}{0.873})^5)]
+            \end{equation}
+
+            Com isto, o trecho de 0º a 120º pode ser representado. Ajustando os valores de $\theta_i$ tambem pode-se determinar as equações para o resto da rotação. 
+            Para 120º < $\theta$ < 240º:
+
+            \begin{equation}
+                s(\theta) = 12 \cdot [10 \cdot (\frac{\theta - 2.094}{0.873})^3 - 15 \cdot (\frac{\theta - 2.094}{0.873})^4 + 6 \cdot (\frac{\theta - 2.094}{0.873})^5]
+            \end{equation}
+
+            \begin{equation}
+                s(\theta) = 12
+            \end{equation}
+
+            \begin{equation}
+                s(\theta) = 12 \cdot [1 - (10 \cdot (\frac{\theta - 3.316}{0.873})^3 - 15 \cdot (\frac{\theta - 3.316}{0.873})^4 + 6 \cdot (\frac{\theta - 3.316}{0.873})^5)]
+            \end{equation}
+
+            Para 240º < $\theta$ < 360º:
+
+            \begin{equation}
+                s(\theta) = 12 \cdot [10 \cdot (\frac{\theta - 4.189}{0.873})^3 - 15 \cdot (\frac{\theta - 4.189}{0.873})^4 + 6 \cdot (\frac{\theta - 4.189}{0.873})^5]
+            \end{equation}
+
+            \begin{equation}
+                s(\theta) = 12
+            \end{equation}
+
+            \begin{equation}
+                s(\theta) = 12 \cdot [1 - (10 \cdot (\frac{\theta - 5.411}{0.873})^3 - 15 \cdot (\frac{\theta - 5.411}{0.873})^4 + 6 \cdot (\frac{\theta - 5.411}{0.873})^5)]
+            \end{equation}
+
+            Assim, plotanto o grafico da posição:
+
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.85\textwidth]{img/posicao.png}
+                \caption{Deslocamento do seguidor em função de $\theta$.}
+                \label{fig:posicao}
+            \end{figure}
+        
+        \subsection{Velocidade}
+            
+            Para a velocidade os valores de $\beta$ continuam os mesmos. Assim, a equação da velocidade para o trecho 1 é:
+
+            \begin{equation}
+                v(\theta) = 360 \cdot \frac{15.708}{0.873} \cdot [(\frac{\theta}{0.873})^2 - 2 \cdot (\frac{\theta}{0.873})^3 + (\frac{\theta}{0.873})^4]
+            \end{equation}
+
+            Para o trecho 2:
+
+            \begin{equation}
+                v(\theta) = 0
+            \end{equation}
+
+            Para o trecho 3:
+
+            \begin{equation}
+                v(\theta) = - 360 \cdot \frac{15.708}{0.873} [(\frac{\theta - 1.222}{0.873})^2 - 2 \cdot (\frac{\theta - 1.222}{0.873})^3 + (\frac{\theta - 1.222}{0.873})^4]
+            \end{equation}
+
+            Para 120º < $\theta$ < 240º:
+
+            \begin{equation}
+                v(\theta) = 360 \cdot \frac{15.708}{0.873} \cdot [(\frac{\theta - 2.094}{0.873})^2 - 2 \cdot (\frac{\theta - 2.094}{0.873})^3 + (\frac{\theta - 2.094}{0.873})^4]
+            \end{equation}
+
+            \begin{equation}
+                v(\theta) = 0
+            \end{equation}
+
+            \begin{equation}
+                v(\theta) = - 360 \cdot \frac{15.708}{0.873} [(\frac{\theta - 3.316}{0.873})^2 - 2 \cdot (\frac{\theta - 3.316}{0.873})^3 + (\frac{\theta - 3.316}{0.873})^4]
+            \end{equation}
+            
+            Para 240º < $\theta$ < 360º:
+
+            \begin{equation}
+                v(\theta) = 360 \cdot \frac{15.708}{0.873} \cdot [(\frac{\theta - 4.189}{0.873})^2 - 2 \cdot (\frac{\theta - 4.189}{0.873})^3 + (\frac{\theta - 4.189}{0.873})^4]
+            \end{equation}
+
+            \begin{equation}
+                v(\theta) = 0
+            \end{equation}
+
+            \begin{equation}
+                v(\theta) = - 360 \cdot \frac{15.708}{0.873} [(\frac{\theta - 5.411}{0.873})^2 - 2 \cdot (\frac{\theta - 5.411}{0.873})^3 + (\frac{\theta - 5.411}{0.873})^4]
+            \end{equation}
+
+            Assim, o gráfico da velocidade é:
+
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.85\textwidth]{img/velocidade.png}
+                \caption{Velocidade do seguidor em função de $\theta$.}
+                \label{fig:velocidade}
+            \end{figure}
+        
+        \subsection{Aceleração}
+            
+            Para a aceleração no trecho 1 tem-se:
+
+            \begin{equation}
+                v(\theta) = 720 \cdot (\frac{15.708}{0.873})^2 \cdot [(\frac{\theta}{0.873}) - 3 \cdot (\frac{\theta}{0.873})^2 + 2 \cdot (\frac{\theta}{0.873})^3]
+            \end{equation}
+
+            Para o trecho 2:
+
+            \begin{equation}
+                v(\theta) = 0
+            \end{equation}
+
+            Para o trecho 3:
+
+            \begin{equation}
+                v(\theta) = - 720 \cdot (\frac{15.708}{0.873})^2 [(\frac{\theta - 1.222}{0.873}) - 3 \cdot (\frac{\theta - 1.222}{0.873})^2 + 2 \cdot (\frac{\theta - 1.222}{0.873})^3]
+            \end{equation}
+
+            Para 120º < $\theta$ < 240º:
+
+            \begin{equation}
+                v(\theta) = 720 \cdot (\frac{15.708}{0.873})^2 \cdot [(\frac{\theta - 2.094}{0.873}) - 3 \cdot (\frac{\theta - 2.094}{0.873})^2 + 2 \cdot (\frac{\theta - 2.094}{0.873})^3]
+            \end{equation}
+
+            \begin{equation}
+                v(\theta) = 0
+            \end{equation}
+
+            \begin{equation}
+                v(\theta) = - 720 \cdot (\frac{15.708}{0.873})^2 [(\frac{\theta - 3.316}{0.873}) - 3 \cdot (\frac{\theta - 3.316}{0.873})^2 + 2 \cdot (\frac{\theta - 3.316}{0.873})^3]
+            \end{equation}
+
+            Para 240º < $\theta$ < 360º:
+
+            \begin{equation}
+                v(\theta) = 720 \cdot (\frac{15.708}{0.873})^2 \cdot [(\frac{\theta - 4.189}{0.873}) - 3 \cdot (\frac{\theta - 4.189}{0.873})^2 + 2 \cdot (\frac{\theta - 4.189}{0.873})^3]
+            \end{equation}
+
+            \begin{equation}
+                v(\theta) = 0
+            \end{equation}
+
+            \begin{equation}
+                v(\theta) = - 720 \cdot (\frac{15.708}{0.873})^2 [(\frac{\theta - 5.411}{0.873}) - 3 \cdot (\frac{\theta - 5.411}{0.873})^2 + 2 \cdot (\frac{\theta - 5.411}{0.873})^3]
+            \end{equation}
+
+            Assim, o gráfico da velocidade é:
+
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.85\textwidth]{img/aceleracao.png}
+                \caption{Aceleração do seguidor em função de $\theta$.}
+                \label{fig:aceleracao}
+            \end{figure}
+        
+        \section{Angulo de pressão}
+
+            Para calcular o gráfico do ângulo de pressão, é necessário levar em conta o raio de base do came $R_b = 19 mm$, 
+            a posição $S(\theta)$ do came e a velocidade $\frac{ds}{d\theta}$. Com estes dados, o angulo de pressão é dado por:
+
+            \begin{equation}
+                \phi(\theta) = \arctan{\frac{\frac{ds}{d\theta}}{R_b + s(\theta)}}
+            \end{equation}
+\end{document}
