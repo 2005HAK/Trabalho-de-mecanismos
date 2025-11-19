@@ -258,53 +258,60 @@
                 \caption{Velocidade do seguidor em função de $\theta$.}
                 \label{fig:velocidade}
             \end{figure}
+
+            Do gráfico da velocidade, fazendo os cálculos pelo geogebra, obtém-se que a velocidade máxima ocorre em 
+            $\theta = 0.44 rad$ e tem valor de:
+
+            \begin{equation}
+                v(0.44) = 404.79 mm/s = 0.4047 m/s
+            \end{equation}
         
         \subsection{Aceleração}
             
             Para a aceleração no trecho 1 tem-se:
 
             \begin{equation}
-                v(\theta) = 720 \cdot (\frac{15.708}{0.873})^2 \cdot [(\frac{\theta}{0.873}) - 3 \cdot (\frac{\theta}{0.873})^2 + 2 \cdot (\frac{\theta}{0.873})^3]
+                a(\theta) = 720 \cdot (\frac{15.708}{0.873})^2 \cdot [(\frac{\theta}{0.873}) - 3 \cdot (\frac{\theta}{0.873})^2 + 2 \cdot (\frac{\theta}{0.873})^3]
             \end{equation}
 
             Para o trecho 2:
 
             \begin{equation}
-                v(\theta) = 0
+                a(\theta) = 0
             \end{equation}
 
             Para o trecho 3:
 
             \begin{equation}
-                v(\theta) = - 720 \cdot (\frac{15.708}{0.873})^2 [(\frac{\theta - 1.222}{0.873}) - 3 \cdot (\frac{\theta - 1.222}{0.873})^2 + 2 \cdot (\frac{\theta - 1.222}{0.873})^3]
+                a(\theta) = - 720 \cdot (\frac{15.708}{0.873})^2 [(\frac{\theta - 1.222}{0.873}) - 3 \cdot (\frac{\theta - 1.222}{0.873})^2 + 2 \cdot (\frac{\theta - 1.222}{0.873})^3]
             \end{equation}
 
             Para 120º < $\theta$ < 240º:
 
             \begin{equation}
-                v(\theta) = 720 \cdot (\frac{15.708}{0.873})^2 \cdot [(\frac{\theta - 2.094}{0.873}) - 3 \cdot (\frac{\theta - 2.094}{0.873})^2 + 2 \cdot (\frac{\theta - 2.094}{0.873})^3]
+                a(\theta) = 720 \cdot (\frac{15.708}{0.873})^2 \cdot [(\frac{\theta - 2.094}{0.873}) - 3 \cdot (\frac{\theta - 2.094}{0.873})^2 + 2 \cdot (\frac{\theta - 2.094}{0.873})^3]
             \end{equation}
 
             \begin{equation}
-                v(\theta) = 0
+                a(\theta) = 0
             \end{equation}
 
             \begin{equation}
-                v(\theta) = - 720 \cdot (\frac{15.708}{0.873})^2 [(\frac{\theta - 3.316}{0.873}) - 3 \cdot (\frac{\theta - 3.316}{0.873})^2 + 2 \cdot (\frac{\theta - 3.316}{0.873})^3]
+                a(\theta) = - 720 \cdot (\frac{15.708}{0.873})^2 [(\frac{\theta - 3.316}{0.873}) - 3 \cdot (\frac{\theta - 3.316}{0.873})^2 + 2 \cdot (\frac{\theta - 3.316}{0.873})^3]
             \end{equation}
 
             Para 240º < $\theta$ < 360º:
 
             \begin{equation}
-                v(\theta) = 720 \cdot (\frac{15.708}{0.873})^2 \cdot [(\frac{\theta - 4.189}{0.873}) - 3 \cdot (\frac{\theta - 4.189}{0.873})^2 + 2 \cdot (\frac{\theta - 4.189}{0.873})^3]
+                a(\theta) = 720 \cdot (\frac{15.708}{0.873})^2 \cdot [(\frac{\theta - 4.189}{0.873}) - 3 \cdot (\frac{\theta - 4.189}{0.873})^2 + 2 \cdot (\frac{\theta - 4.189}{0.873})^3]
             \end{equation}
 
             \begin{equation}
-                v(\theta) = 0
+                a(\theta) = 0
             \end{equation}
 
             \begin{equation}
-                v(\theta) = - 720 \cdot (\frac{15.708}{0.873})^2 [(\frac{\theta - 5.411}{0.873}) - 3 \cdot (\frac{\theta - 5.411}{0.873})^2 + 2 \cdot (\frac{\theta - 5.411}{0.873})^3]
+                a(\theta) = - 720 \cdot (\frac{15.708}{0.873})^2 [(\frac{\theta - 5.411}{0.873}) - 3 \cdot (\frac{\theta - 5.411}{0.873})^2 + 2 \cdot (\frac{\theta - 5.411}{0.873})^3]
             \end{equation}
 
             Assim, o gráfico da velocidade é:
@@ -315,13 +322,75 @@
                 \caption{Aceleração do seguidor em função de $\theta$.}
                 \label{fig:aceleracao}
             \end{figure}
-        
-        \section{Angulo de pressão}
 
-            Para calcular o gráfico do ângulo de pressão, é necessário levar em conta o raio de base do came $R_b = 19 mm$, 
-            a posição $S(\theta)$ do came e a velocidade $\frac{ds}{d\theta}$. Com estes dados, o angulo de pressão é dado por:
+            Do mesmo modo que para a velocidade, pelo geogebra, obtem-se que a aceleração máxima ocorre em $\theta = 0.18 rad$ 
+            tendo como valor máximo:
 
             \begin{equation}
-                \phi(\theta) = \arctan{\frac{\frac{ds}{d\theta}}{R_b + s(\theta)}}
+                a(0.18) = 11209.76 mm/2^2 = 11.2098 m/s^2
             \end{equation}
+        
+        \section{ângulo de pressão}
+
+            Para calcular o gráfico do ângulo de pressão, é necessário levar em conta o raio de base do came $R_b = 19 mm$, 
+            a posição $S(\theta)$ do came e a velocidade $\frac{ds(\theta)}{d\theta}$. Com estes dados, o angulo de pressão é dado por:
+
+            \begin{equation}
+                \phi(\theta) = \arctan{\frac{\frac{ds(\theta)}{d\theta}}{R_b + s(\theta)}}
+            \end{equation}
+
+            Aplicando esta fórmula para cada trecho do deslocamento do came tem-se o seguinte gráfico do angulo de pressão: 
+
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.85\textwidth]{img/angulo de pressão.png}
+                \caption{Angulo de pressão em função de $\theta$.}
+                \label{fig:angulo de pressao}
+            \end{figure}
+
+            Sendo que no gráfico o ângulo está dado em radianos. Com o grafico plotado e usando a função intercect no geogebra 
+            é possivel encontrar que o primeiro valor máximo de ângulo de pressão ocorre em $\theta = 0.39 rad = 22.35^\circ$ e que o valor deste 
+            ângulo de pressão é:
+
+            \begin{equation}
+                \phi(0.39) = 0.75 rad = 42.73^\circ
+            \end{equation}
+
+            Com este valor pode-se verificar que é um valor ruim para utilização, pois as forças laterais no seguidor serão muito grandes 
+            causando desgaste excessivo nas peças, portanto para que o projeto fosse viável seria necessário aumentar o raio de base para 
+            um valor que tornasse $\phi_{max}$ menor que $30^\circ$.
+
+            Analisando o primeiro trecho para um polinomio 4-5-6-7, tem-se que o a posição e a velocidade são dados por:
+
+            \begin{equation}
+                s(\theta) = 12 \cdot [15 \cdot (\frac{\theta}{0.873})^4 - 24 \cdot (\frac{\theta}{0.873})^5 + 10 \cdot (\frac{\theta}{0.873})^6]
+            \end{equation}
+
+            \begin{equation}
+                v(\theta) = 720 \cdot  \cdot [(\frac{\theta}{0.873})^3 - 2 \cdot (\frac{\theta}{0.873})^4 + (\frac{\theta}{0.873})^5]
+            \end{equation}
+
+            Calculando o ângulo de pressão a partir desse trecho, derivando e igualando a 0 pode-se determinar que o ângulo de pressão 
+            aumentou para $\approx45^\circ$. Logo, apesar de melhorar a questão dos solavancos no seguidor nas extremidades, o problema do 
+            ângulo de pressão alto não se corrige somente aumentando o grau do polinomio, deve-se também mexer nas dimensões do came.
+    
+    \clearpage
+    \begin{thebibliography}{9}
+
+    \bibitem{Mecanismos}
+    J. Maria, J. M. Barbosa.
+    \textit{Curvas de elevação}.
+    Universidade Federal de Pernanbuco, 2022.
+    Disponível em: \url{https://mecanismos.net.br/cames-introducao/}
+    Acesso em: 09 de novembro de 2025.
+
+    \bibitem{Mecanismos}
+    J. Maria, J. M. Barbosa.
+    \textit{Ângulo de pressão}.
+    Universidade Federal de Pernanbuco, 2022.
+    Disponível em: \url{https://mecanismos.net.br/angulo-de-pressao/}
+    Acesso em: 09 de novembro de 2025.
+
+    \end{thebibliography}
+
 \end{document}
