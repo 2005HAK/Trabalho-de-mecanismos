@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.11.1)  18 NOV 2025 22:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.11.1)  20 NOV 2025 08:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -286,9 +286,27 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box54
 \@float@everytoks=\toks29
 \@floatcapt=\box55
+) (C:\Users\heber\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+ (C:\Users\heber\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen170
+\captionmargin=\dimen171
+\caption@leftmargin=\dimen172
+\caption@rightmargin=\dimen173
+\caption@width=\dimen174
+\caption@indent=\dimen175
+\caption@parindent=\dimen176
+\caption@hangindent=\dimen177
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count291
+\c@continuedfloat=\count292
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
 ) (C:\Users\heber\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count291
+\l__color_backend_stack_int=\count293
 \l__pdf_internal_box=\box56
 ) (Trabalho2.aux
 
@@ -297,24 +315,24 @@ LaTeX Warning: Label `Mecanismos' multiply defined.
 )
 \openout1 = `Trabalho2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -352,16 +370,16 @@ LaTeX Font Info:    ... okay on input line 51.
 
 (C:\Users\heber\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count292
-\scratchdimen=\dimen170
+\scratchcounter=\count294
+\scratchdimen=\dimen178
 \scratchbox=\box57
-\nofMPsegments=\count293
-\nofMParguments=\count294
+\nofMPsegments=\count295
+\nofMParguments=\count296
 \everyMPshowfont=\toks30
-\MPscratchCnt=\count295
-\MPscratchDim=\dimen171
-\MPnumerator=\count296
-\makeMPintoPDFobject=\count297
+\MPscratchCnt=\count297
+\MPscratchDim=\dimen179
+\MPnumerator=\count298
+\makeMPintoPDFobject=\count299
 \everyMPtoPDFconversion=\toks31
 ) (C:\Users\heber\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -369,86 +387,74 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\heber\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 51.
+Package hyperref Info: Link coloring OFF on input line 60.
  (Trabalho2.out) (Trabalho2.out)
 \@outlinefile=\write3
 \openout3 = `Trabalho2.out'.
 
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+<img/vertical_sigla_fundo_claro.png, id=35, 325.215pt x 448.3149pt>
+File: img/vertical_sigla_fundo_claro.png Graphic file (type png)
+<use img/vertical_sigla_fundo_claro.png>
+Package pdftex.def Info: img/vertical_sigla_fundo_claro.png  used on input line 66.
+(pdftex.def)             Requested size: 64.01608pt x 88.24535pt.
  [1
 
-{C:/Users/heber/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 84.
+{C:/Users/heber/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./img/vertical_sigla_fundo_claro.png>] (Trabalho2.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
  (C:\Users\heber\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 84.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
  (C:\Users\heber\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
+))
+\tf@toc=\write4
+\openout4 = `Trabalho2.toc'.
+
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.136 
-       [1]
-<img/posicao.png, id=54, 583.42969pt x 270.25969pt>
+l.85     \clearpage
+                    [1] [2
+
+] [3]
+<img/posicao.png, id=84, 583.42969pt x 270.25969pt>
 File: img/posicao.png Graphic file (type png)
 <use img/posicao.png>
-Package pdftex.def Info: img/posicao.png  used on input line 200.
+Package pdftex.def Info: img/posicao.png  used on input line 235.
 (pdftex.def)             Requested size: 362.77525pt x 168.05pt.
- [2]
-<img/velocidade.png, id=70, 521.69907pt x 389.20406pt>
+ [4 <./img/posicao.png>]
+<img/velocidade.png, id=103, 521.69907pt x 389.20406pt>
 File: img/velocidade.png Graphic file (type png)
 <use img/velocidade.png>
-Package pdftex.def Info: img/velocidade.png  used on input line 257.
+Package pdftex.def Info: img/velocidade.png  used on input line 298.
 (pdftex.def)             Requested size: 362.77525pt x 270.64154pt.
- [3
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.261 
-       <./img/posicao.png>] [4
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.301             \end{equation}
-                                 <./img/velocidade.png>]
-<img/aceleracao.png, id=97, 512.66531pt x 363.60844pt>
+ [5 <./img/velocidade.png>]
+<img/aceleracao.png, id=118, 512.66531pt x 363.60844pt>
 File: img/aceleracao.png Graphic file (type png)
 <use img/aceleracao.png>
-Package pdftex.def Info: img/aceleracao.png  used on input line 321.
+Package pdftex.def Info: img/aceleracao.png  used on input line 368.
 (pdftex.def)             Requested size: 362.77525pt x 257.29826pt.
- [5
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.343 
-       <./img/aceleracao.png>]
-<img/angulo de pressão.png, id=110, 643.6547pt x 289.83281pt>
+ [6]
+<img/angulo de pressão.png, id=133, 643.6547pt x 289.83281pt>
 File: img/angulo de pressão.png Graphic file (type png)
 <use img/angulo de pressão.png>
-Package pdftex.def Info: img/angulo de pressão.png  used on input line 346.
+Package pdftex.def Info: img/angulo de pressão.png  used on input line 399.
 (pdftex.def)             Requested size: 362.77525pt x 163.3578pt.
- [6
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.377     \clearpage
-                     <./img/angulo de pressão.png>]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 384.
+ [7 <./img/aceleracao.png>] [8 <./img/angulo de pressão.png>] [9]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 456.
  (C:\Users\heber\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-)
-Underfull \hbox (badness 2894) in paragraph at lines 388--393
-\T1/cmr/m/n/12 2022. Dis-po-n�-vel em: []$\T1/cmtt/m/n/12 https : / / mecanismos . net . br / angulo-[]de-[]pressao/$[]
- []
-
-[7
+) [10
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{cite.Mecanismos}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.396 \end{document}
+l.483 \end{document}
                     ] (Trabalho2.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
@@ -459,20 +465,20 @@ L3 programming layer <2024-01-04>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Trabalho2.out' has not changed.
-(rerunfilecheck)             Checksum: 8B421FC4885CCE5C7420891454DC055C;824.
+(rerunfilecheck)             Checksum: BE631964E9A15D434205EAFAA82F0421;915.
  ) 
 Here is how much of TeX's memory you used:
- 11818 strings out of 474485
- 183809 string characters out of 5743734
- 1938542 words of memory out of 5000000
- 33890 multiletter control sequences out of 15000+600000
- 565588 words of font info for 59 fonts, out of 8000000 for 9000
+ 13176 strings out of 474485
+ 210204 string characters out of 5743734
+ 1940542 words of memory out of 5000000
+ 35220 multiletter control sequences out of 15000+600000
+ 571367 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,6n,87p,331b,469s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\heber\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\heber\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\heber\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\heber\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\heber\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk><C:/Users/heber/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/heber/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/heber/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/heber/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/heber/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/heber/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Trabalho2.pdf (8 pages, 285517 bytes).
+ 75i,7n,114p,331b,469s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\heber\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\heber\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\heber\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\heber\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\heber\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\heber\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\heber\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\heber\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk><C:/Users/heber/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/heber/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/heber/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/heber/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/heber/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/heber/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/heber/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/heber/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/heber/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on Trabalho2.pdf (11 pages, 503336 bytes).
 PDF statistics:
- 340 PDF objects out of 1000 (max. 8388607)
- 61 named destinations out of 1000 (max. 500000)
- 77 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 502 PDF objects out of 1000 (max. 8388607)
+ 69 named destinations out of 1000 (max. 500000)
+ 90 words of extra memory for PDF output out of 10000 (max. 10000000)
 

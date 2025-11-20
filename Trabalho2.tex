@@ -10,9 +10,18 @@
 \usepackage{titlesec}
 \usepackage{indentfirst}
 \usepackage{float}
+\usepackage{caption}
 
 \geometry{a4paper, margin={3cm,2cm,2cm,3cm}}
 \setlength{\parindent}{1.25cm}
+
+\captionsetup{
+    font=footnotesize,
+    labelfont=bf,
+    position=top,
+    justification=centering,
+    singlelinecheck=false
+}
 
 % --- Configuração de Títulos (com titlesec) ---
 % Força os títulos a terem 12pt (\normalsize) e negrito
@@ -24,8 +33,8 @@
   {}                     % código antes do título (pode deixar vazio)
 
 \titleformat{\subsection}
-  {\normalsize\MakeUppercase} % formato: 12pt e negrito
-  {\thesubsection.}      % rótulo (número): "1.1."
+  {\normalsize\bfseries} % formato: 12pt e negrito
+  {\thesubsection}      % rótulo (número): "1.1"
   {1em}                  % separação
   {}                     % código antes
 
@@ -41,21 +50,26 @@
 \newcommand{\curso}{Engenharia Mecatrônica}
 \newcommand{\professor}{Prof. Lucas Weihmann}
 \newcommand{\titulo}{Projeto de Came máquina de costura}
-\newcommand{\autori}{Gabriel Andrea Carvalho}
-\newcommand{\autorii}{Gabriella Arévalo Marques}
-\newcommand{\autoriii}{Hebert Alan Kubis}
-\newcommand{\autoriv}{Jeiel Santos Araújo Oliveira}
-\newcommand{\autorv}{João Vitor Franque Goetz}
-\newcommand{\autorvi}{Johanna Camila Rey}
+\newcommand{\autori}{Gabriel A. Carvalho}
+\newcommand{\autorii}{Gabriella A. Marques}
+\newcommand{\autoriii}{Hebert A. Kubis}
+\newcommand{\autoriv}{Jeiel S. A. Oliveira}
+\newcommand{\autorv}{João V. F. Goetz}
+\newcommand{\autorvi}{Johanna C. Rey}
 
 \begin{document}
     
     \begin{titlepage}
         \begin{center}
+            \begin{figure}[h!]
+                \centering
+                \includegraphics[width=.15\textwidth]{img/vertical_sigla_fundo_claro.png}
+            \end{figure}
             {\bfseries \MakeUppercase{\universidade}}\\
             {\bfseries \MakeUppercase{\centro}}\\[3cm]
 
-            {\MakeUppercase{\autori, \autorii, \autoriii, \autoriv, \autorv, \autorvi}}
+            {\MakeUppercase{\autori, \autorii, \autoriii\\
+                            \autoriv, \autorv, \autorvi}}
 
             \vfill
             {\bfseries \MakeUppercase{\titulo}}\\
@@ -67,7 +81,25 @@
         \end{center}
     \end{titlepage}
 
+    \tableofcontents
+    \clearpage
+
     \section{Introdução}
+
+    Este, tem como finalidade desenvolver o projeto de um came responsável pelo movimento vertical da agulha 
+    em uma máquina de costura. Esse mecanismo realiza a conversão do movimento rotativo em deslocamento 
+    linear periódico, sendo fundamental para garantir a regularidade e a qualidade do ponto produzido. 
+    A precisão geométrica e cinemática do came influencia diretamente o desempenho do sistema, de modo que o 
+    perfil adotado deve assegurar suavidade, repetibilidade e esforços reduzidos sobre o seguidor.
+
+    Com base nos requisitos estabelecidos para o projeto, foi selecionado o perfil polinomial 3-4-5, 
+    amplamente empregado em mecanismos de cames devido à continuidade de aceleração que proporciona e à 
+    relativa simplicidade de modelagem. A partir desse perfil, foram determinadas as equações analíticas de 
+    posição, velocidade e aceleração do seguidor ao longo de todo o intervalo de rotação de 360°. Em seguida, 
+    foram elaborados os diagramas EVAP, o gráfico do ângulo de pressão e a análise dos valores máximos de 
+    velocidade, aceleração e ângulo de pressão, parâmetros essenciais para a verificação da viabilidade 
+    mecânica do mecanismo. O trabalho inclui, ainda, o desenho do came, a animação do conjunto came–seguidor 
+    e o modelo para impressão tridimensional.
 
     \section{Requisitos de projeto}
 
@@ -95,10 +127,10 @@
         Onde:
 
         \begin{itemize}
-            \item s = deslocamento do seguidor
-            \item $\theta$ = angulo de rotação do Came
-            \item $c_i$ = constantes (i = 1, 2, 3, ...)
-            \item n - a ordem do polinomio
+            \item $\mathbf{s}$ = deslocamento do seguidor
+            \item $\mathbf{\theta}$ = angulo de rotação do Came
+            \item $\mathbf{c_i}$ = constantes (i = 1, 2, 3, ...)
+            \item $\mathbf{n}$ - a ordem do polinomio
         \end{itemize}
 
         Como pedido no trabalho, o polinomio a ser utilizado deve ser um 3-4-5, ou seja:
@@ -195,10 +227,16 @@
 
             Assim, plotanto o grafico da posição:
 
-            \begin{figure}[H]
-                \centering
-                \includegraphics[width=0.85\textwidth]{img/posicao.png}
+            \begin{figure}[h!]
                 \caption{Deslocamento do seguidor em função de $\theta$.}
+                \vspace{0.5em}
+                \centering
+
+                \includegraphics[width=0.85\textwidth]{img/posicao.png}
+
+                \vspace{0.5em}
+                \centering
+                \footnotesize\textit{Fonte: Dos Autores}
                 \label{fig:posicao}
             \end{figure}
         
@@ -253,9 +291,15 @@
             Assim, o gráfico da velocidade é:
 
             \begin{figure}[H]
+                \caption{Velocidade do seguidor em função de $\theta$.}
+                \vspace{0.5em}
+
                 \centering
                 \includegraphics[width=0.85\textwidth]{img/velocidade.png}
-                \caption{Velocidade do seguidor em função de $\theta$.}
+
+                \vspace{0.5em}
+                \centering
+                \footnotesize\textit{Fonte: Dos Autores}
                 \label{fig:velocidade}
             \end{figure}
 
@@ -317,9 +361,15 @@
             Assim, o gráfico da velocidade é:
 
             \begin{figure}[H]
+                \caption{Aceleração do seguidor em função de $\theta$.}
+                \vspace{0.5em}
+
                 \centering
                 \includegraphics[width=0.85\textwidth]{img/aceleracao.png}
-                \caption{Aceleração do seguidor em função de $\theta$.}
+                
+                \vspace{0.5em}
+                \centering
+                \footnotesize\textit{Fonte: Dos Autores}
                 \label{fig:aceleracao}
             \end{figure}
 
@@ -342,9 +392,15 @@
             Aplicando esta fórmula para cada trecho do deslocamento do came tem-se o seguinte gráfico do angulo de pressão: 
 
             \begin{figure}[H]
+                \caption{Angulo de pressão em função de $\theta$.}
+                \vspace{0.5em}
+
                 \centering
                 \includegraphics[width=0.85\textwidth]{img/angulo de pressão.png}
-                \caption{Angulo de pressão em função de $\theta$.}
+                
+                \vspace{0.5em}
+                \centering
+                \footnotesize\textit{Fonte: Dos Autores}
                 \label{fig:angulo de pressao}
             \end{figure}
 
@@ -374,22 +430,53 @@
             aumentou para $\approx45^\circ$. Logo, apesar de melhorar a questão dos solavancos no seguidor nas extremidades, o problema do 
             ângulo de pressão alto não se corrige somente aumentando o grau do polinomio, deve-se também mexer nas dimensões do came.
     
+    \section{Conclusão}
+    
+        O desenvolvimento do came proposto permitiu obter um modelo completo a partir dos requisitos fornecidos 
+        e do perfil polinomial 3-4-5. As equações de posição, velocidade e aceleração foram determinadas de 
+        forma consistente e permitiram a construção dos diagramas EVAP, possibilitando uma análise detalhada 
+        do comportamento cinemático do seguidor. A avaliação do ângulo de pressão revelou valores superiores a 
+        40°, indicando esforços laterais elevados e sugerindo que ajustes geométricos, como o aumento do raio de 
+        base, seriam necessários para aplicação prática.
+        
+        A análise também evidenciou que o aumento do grau do polinômio reduz os solavancos do movimento, embora 
+        não seja suficiente para resolver o problema do ângulo de pressão isoladamente. O desenho técnico, a 
+        animação do mecanismo e o modelo para impressão 3D complementaram o estudo, permitindo visualizar e 
+        validar o funcionamento do came projetado. Assim, o trabalho atingiu os objetivos propostos, fornecendo 
+        uma avaliação completa do perfil de came e destacando os fatores relevantes para seu emprego em sistemas 
+        reais.
+
     \clearpage
     \begin{thebibliography}{9}
 
     \bibitem{Mecanismos}
-    J. Maria, J. M. Barbosa.
+    MARIA, José; BARBOSA, José M..
     \textit{Curvas de elevação}.
     Universidade Federal de Pernanbuco, 2022.
     Disponível em: \url{https://mecanismos.net.br/cames-introducao/}
     Acesso em: 09 de novembro de 2025.
 
     \bibitem{Mecanismos}
-    J. Maria, J. M. Barbosa.
+    MARIA, José; BARBOSA, José M..
     \textit{Ângulo de pressão}.
     Universidade Federal de Pernanbuco, 2022.
     Disponível em: \url{https://mecanismos.net.br/angulo-de-pressao/}
     Acesso em: 09 de novembro de 2025.
+
+    \bibitem{design de mecanismos}
+    ERDMAN, Arthur G..
+    \textit{Mechanism design: analysis and synthesis}.
+    4th ed. Upper Saddle River, NJ: Prentice Hall, 2001. v. ISBN 0130408727.
+
+    \bibitem{elementos de maquinas}
+    BUDYMAS, Richard G.; NISBETT, J. Keith.
+    \textit{Elementos de máquinas de Shigley: projeto de engenharia mecânica}.
+    8ª ed. Porto Alegre, RS: AMGH, 2011. 1084 p. ISBN 9788563308207.
+
+    \bibitem{youtube}
+    \textit{Perfil de came e funcionamento de máquina de costura}.
+    Youtube, 2017. Disponível em: \url{https://www.youtube.com/watch?v=fZQDXpr_NTc}.
+    Acesso em: 19 de novembro de 2025.
 
     \end{thebibliography}
 
