@@ -11,6 +11,7 @@
 \usepackage{indentfirst}
 \usepackage{float}
 \usepackage{caption}
+\usepackage{animate}
 
 \geometry{a4paper, margin={3cm,2cm,2cm,3cm}}
 \setlength{\parindent}{1.25cm}
@@ -380,56 +381,122 @@
                 a(0.18) = 11209.76 mm/2^2 = 11.2098 m/s^2
             \end{equation}
         
-        \section{ângulo de pressão}
+    \section{ângulo de pressão}
 
-            Para calcular o gráfico do ângulo de pressão, é necessário levar em conta o raio de base do came $R_b = 19 mm$, 
-            a posição $S(\theta)$ do came e a velocidade $\frac{ds(\theta)}{d\theta}$. Com estes dados, o angulo de pressão é dado por:
+        Para calcular o gráfico do ângulo de pressão, é necessário levar em conta o raio de base do came $R_b = 19 mm$, 
+        a posição $S(\theta)$ do came e a velocidade $\frac{ds(\theta)}{d\theta}$. Com estes dados, o angulo de pressão é dado por:
 
-            \begin{equation}
-                \phi(\theta) = \arctan{\frac{\frac{ds(\theta)}{d\theta}}{R_b + s(\theta)}}
-            \end{equation}
+        \begin{equation}
+            \phi(\theta) = \arctan{\frac{\frac{ds(\theta)}{d\theta}}{R_b + s(\theta)}}
+        \end{equation}
 
-            Aplicando esta fórmula para cada trecho do deslocamento do came tem-se o seguinte gráfico do angulo de pressão: 
+        Aplicando esta fórmula para cada trecho do deslocamento do came tem-se o seguinte gráfico do angulo de pressão: 
 
-            \begin{figure}[H]
-                \caption{Angulo de pressão em função de $\theta$.}
-                \vspace{0.5em}
+        \begin{figure}[H]
+            \caption{Angulo de pressão em função de $\theta$.}
+            \vspace{0.5em}
 
-                \centering
-                \includegraphics[width=0.85\textwidth]{img/angulo de pressão.png}
-                
-                \vspace{0.5em}
-                \centering
-                \footnotesize\textit{Fonte: Dos Autores}
-                \label{fig:angulo de pressao}
-            \end{figure}
+            \centering
+            \includegraphics[width=0.85\textwidth]{img/angulo de pressão.png}
+            
+            \vspace{0.5em}
+            \centering
+            \footnotesize\textit{Fonte: Dos Autores}
+            \label{fig:angulo de pressao}
+        \end{figure}
 
-            Sendo que no gráfico o ângulo está dado em radianos. Com o grafico plotado e usando a função intercect no geogebra 
-            é possivel encontrar que o primeiro valor máximo de ângulo de pressão ocorre em $\theta = 0.39 rad = 22.35^\circ$ e que o valor deste 
-            ângulo de pressão é:
+        Sendo que no gráfico o ângulo está dado em radianos. Com o grafico plotado e usando a função intercect no geogebra 
+        é possivel encontrar que o primeiro valor máximo de ângulo de pressão ocorre em $\theta = 0.39 rad = 22.35^\circ$ e que o valor deste 
+        ângulo de pressão é:
 
-            \begin{equation}
-                \phi(0.39) = 0.75 rad = 42.73^\circ
-            \end{equation}
+        \begin{equation}
+            \phi(0.39) = 0.75 rad = 42.73^\circ
+        \end{equation}
 
-            Com este valor pode-se verificar que é um valor ruim para utilização, pois as forças laterais no seguidor serão muito grandes 
-            causando desgaste excessivo nas peças, portanto para que o projeto fosse viável seria necessário aumentar o raio de base para 
-            um valor que tornasse $\phi_{max}$ menor que $30^\circ$.
+        Com este valor pode-se verificar que é um valor ruim para utilização, pois as forças laterais no seguidor serão muito grandes 
+        causando desgaste excessivo nas peças, portanto para que o projeto fosse viável seria necessário aumentar o raio de base para 
+        um valor que tornasse $\phi_{max}$ menor que $30^\circ$.
 
-            Analisando o primeiro trecho para um polinomio 4-5-6-7, tem-se que o a posição e a velocidade são dados por:
+        Analisando o primeiro trecho para um polinomio 4-5-6-7, tem-se que o a posição e a velocidade são dados por:
 
-            \begin{equation}
-                s(\theta) = 12 \cdot [15 \cdot (\frac{\theta}{0.873})^4 - 24 \cdot (\frac{\theta}{0.873})^5 + 10 \cdot (\frac{\theta}{0.873})^6]
-            \end{equation}
+        \begin{equation}
+            s(\theta) = 12 \cdot [15 \cdot (\frac{\theta}{0.873})^4 - 24 \cdot (\frac{\theta}{0.873})^5 + 10 \cdot (\frac{\theta}{0.873})^6]
+        \end{equation}
 
-            \begin{equation}
-                v(\theta) = 720 \cdot  \cdot [(\frac{\theta}{0.873})^3 - 2 \cdot (\frac{\theta}{0.873})^4 + (\frac{\theta}{0.873})^5]
-            \end{equation}
+        \begin{equation}
+            v(\theta) = 720 \cdot  \cdot [(\frac{\theta}{0.873})^3 - 2 \cdot (\frac{\theta}{0.873})^4 + (\frac{\theta}{0.873})^5]
+        \end{equation}
 
-            Calculando o ângulo de pressão a partir desse trecho, derivando e igualando a 0 pode-se determinar que o ângulo de pressão 
-            aumentou para $\approx45^\circ$. Logo, apesar de melhorar a questão dos solavancos no seguidor nas extremidades, o problema do 
-            ângulo de pressão alto não se corrige somente aumentando o grau do polinomio, deve-se também mexer nas dimensões do came.
-    
+        Calculando o ângulo de pressão a partir desse trecho, derivando e igualando a 0 pode-se determinar que o ângulo de pressão 
+        aumentou para $\approx45^\circ$. Logo, apesar de melhorar a questão dos solavancos no seguidor nas extremidades, o problema do 
+        ângulo de pressão alto não se corrige somente aumentando o grau do polinomio, deve-se também mexer nas dimensões do came.
+
+    \section{Modelagem e Simulação do Came}
+
+        A partir das equações paramétricas obtidas para o perfil polinomial 3-4-5, procedeu-se à modelagem 
+        tridimensional do came utilizando o software Autodesk Fusion 360, com o objetivo de validar a geometria 
+        resultante e verificar a compatibilidade cinemática entre o came e o seguidor rolante. A modelagem 
+        iniciou-se pela geração de um conjunto de pontos discretizados do contorno, obtidos diretamente das 
+        funções de elevação $s(\theta)$, considerando o raio de base $R_b = 19 mm$ e o deslocamento radial total 
+        do seguidor. Esses pontos foram importados como coordenadas polares e convertidos para coordenadas 
+        cartesianas para construção da spline que define o perfil final.
+
+        Após a reconstrução do contorno, realizou-se a extrusão do perfil para obtenção do sólido tridimensional 
+        do came. O rolete seguidor, modelado com raio $r_f = 6 mm$, foi incorporado ao conjunto para permitir a 
+        análise de contato. O acoplamento entre came e seguidor foi configurado por meio de restrições rígidas e 
+        da definição de um joint rotacional no eixo do came, impondo a rotação contínua de $\omega = 150 rpm$.
+
+        \begin{figure}[H]
+            \caption{Modelagem do mecânismo no software Autodesk Fusion 360}
+            \vspace{0.5em}
+
+            \centering
+            \includegraphics[width=0.85\textwidth]{img/modelagemCame.jpg}
+            
+            \vspace{0.5em}
+            \centering
+            \footnotesize\textit{Fonte: Dos Autores}
+            \label{fig:modelagem mecanismo}
+        \end{figure}
+
+        Com o conjunto montado, foi executada a simulação cinemática direta, permitindo observar o comportamento 
+        do seguidor para todo o ciclo de $360^\circ$. A análise evidenciou:
+
+        \begin{itemize}
+            \item Conformidade geométrica entre o perfil teórico e o movimento obtido pelo contato real com o 
+            rolete;
+            \item Coerência entre a elevação simulada e a curva analítica $s(\theta)$, confirmando a exatidão do 
+            perfil importado;
+            \item Identificação visual das regiões críticas onde a curvatura reduzida aumenta o risco de perda 
+            de contato ou impacto;
+            \item Correspondência entre a variação de velocidade aparente e os picos de velocidade obtidos 
+            analiticamente, reforçando a consistência do modelo.
+        \end{itemize}
+
+        \begin{figure}[H]
+            \caption{Simulação do mecânismo no software Autodesk Fusion 360}
+            \vspace{0.5em}
+
+            \centering
+            \includegraphics[width=0.4\textwidth]{img/simulacao.png}
+            
+            \vspace{0.5em}
+            \centering
+            \footnotesize\textit{Fonte: Dos Autores}
+            \label{fig:simulacao}
+        \end{figure}
+
+
+        Além disso, a simulação permitiu avaliar o comportamento do ângulo de pressão de forma qualitativa, 
+        evidenciando o aumento do componente lateral da força transmitida ao seguidor nas regiões anteriormente 
+        identificadas como críticas pela análise analítica. Tais observações reforçam a conclusão de que, apesar 
+        da suavidade cinemática proporcionada pelo polinômio 3-4-5, o raio de base adotado é insuficiente para 
+        limitar o ângulo de pressão a valores aceitáveis para operação contínua.
+
+        Por fim, a modelagem permitiu a geração de um protótipo digital fiel, utilizado posteriormente para a 
+        produção do modelo físico via impressão 3D, garantindo que o componente fabricado reproduz com precisão 
+        o comportamento previsto pelas equações e pela simulação.
+
     \section{Conclusão}
     
         O desenvolvimento do came proposto permitiu obter um modelo completo a partir dos requisitos fornecidos 

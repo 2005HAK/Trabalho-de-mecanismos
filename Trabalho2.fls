@@ -126,8 +126,26 @@ INPUT C:\Users\heber\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption.sty
 INPUT C:\Users\heber\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption.sty
 INPUT C:\Users\heber\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
 INPUT C:\Users\heber\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
+INPUT C:\Users\heber\AppData\Local\Programs\MiKTeX\tex\latex\animate\animate.sty
+INPUT C:\Users\heber\AppData\Local\Programs\MiKTeX\tex\latex\animate\animate.sty
+INPUT C:\Users\heber\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
+INPUT C:\Users\heber\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
+INPUT C:\Users\heber\AppData\Local\Programs\MiKTeX\tex\latex\oberdiek\ifdraft.sty
+INPUT C:\Users\heber\AppData\Local\Programs\MiKTeX\tex\latex\oberdiek\ifdraft.sty
+INPUT C:\Users\heber\AppData\Local\Programs\MiKTeX\tex\latex\tools\calc.sty
+INPUT C:\Users\heber\AppData\Local\Programs\MiKTeX\tex\latex\tools\calc.sty
+INPUT C:\Users\heber\AppData\Local\Programs\MiKTeX\tex\latex\media9\pdfbase.sty
+INPUT C:\Users\heber\AppData\Local\Programs\MiKTeX\tex\latex\media9\pdfbase.sty
 INPUT C:\Users\heber\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Users\heber\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Users\heber\AppData\Local\Programs\MiKTeX\tex\latex\zref\zref-abspage.sty
+INPUT C:\Users\heber\AppData\Local\Programs\MiKTeX\tex\latex\zref\zref-abspage.sty
+INPUT C:\Users\heber\AppData\Local\Programs\MiKTeX\tex\latex\zref\zref-base.sty
+INPUT C:\Users\heber\AppData\Local\Programs\MiKTeX\tex\latex\zref\zref-base.sty
+INPUT C:\Users\heber\AppData\Local\Programs\MiKTeX\tex\generic\etexcmds\etexcmds.sty
+INPUT C:\Users\heber\AppData\Local\Programs\MiKTeX\tex\generic\etexcmds\etexcmds.sty
+INPUT C:\Users\heber\AppData\Local\Programs\MiKTeX\tex\latex\ocgx2\ocgbase.sty
+INPUT C:\Users\heber\AppData\Local\Programs\MiKTeX\tex\latex\ocgx2\ocgbase.sty
 INPUT .\Trabalho2.aux
 INPUT .\Trabalho2.aux
 INPUT Trabalho2.aux
@@ -230,6 +248,20 @@ INPUT .\img\angulo de pressão.png
 INPUT .\img\angulo de pressão.png
 INPUT .\img\angulo de pressão.png
 INPUT .\img\angulo de pressão.png
+INPUT .\img\modelagemCame.jpg
+INPUT .\img\modelagemCame.jpg
+INPUT .\img\modelagemCame.jpg
+INPUT .\img\modelagemCame.jpg
+INPUT .\img\modelagemCame.jpg
+INPUT .\img\modelagemCame.jpg
+INPUT .\img\modelagemCame.jpg
+INPUT .\img\simulacao.png
+INPUT .\img\simulacao.png
+INPUT .\img\simulacao.png
+INPUT .\img\simulacao.png
+INPUT .\img\simulacao.png
+INPUT .\img\simulacao.png
+INPUT .\img\simulacao.png
 INPUT C:\Users\heber\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti1200.tfm
 INPUT C:\Users\heber\AppData\Local\Programs\MiKTeX\tex\latex\base\t1cmtt.fd
 INPUT C:\Users\heber\AppData\Local\Programs\MiKTeX\tex\latex\base\t1cmtt.fd
